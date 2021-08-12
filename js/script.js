@@ -155,6 +155,7 @@ document
     var contactList = document.querySelector(".contactList");
     var savedContacts = JSON.parse(localStorage.getItem("contacts"));
     if (savedContacts) {
+      contactList.innerHTML = "";
       contactList.innerHTML += `<div class="accordion" id="accordionExample">
           <h4 class="text-center">CONTACT LIST</h4>`;
       savedContacts.forEach(function (contact) {
@@ -192,7 +193,9 @@ document
           `;
       });
       contactList.innerHTML += `</div>`;
+      return;
     } else {
+      contactList.innerHTML = "";
       contactList.innerHTML += `<div class="accordion" id="accordionExample">
         <h4 class="text-center">CONTACT LIST</h4>`;
       contact.forEach(function (contact) {
@@ -230,6 +233,7 @@ document
         `;
       });
       contactList.innerHTML += `</div>`;
+      return;
     }
   });
 
