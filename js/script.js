@@ -250,6 +250,7 @@ document.getElementById("searchForm").addEventListener("submit", function (e) {
   var searchText = document.getElementById("searchText").value;
 
   if (searchText === "") {
+    document.getElementById("error").innerHTML = "";
     document.getElementById("error").innerHTML +=
       "<span class='error'>Field is required</span>";
     return;
@@ -258,18 +259,23 @@ document.getElementById("searchForm").addEventListener("submit", function (e) {
   var savedContacts = JSON.parse(localStorage.getItem("contacts"));
   const contactsFiltered = savedContacts.filter(
     (contact) =>
-      contact.firstName.toLowerCase() === searchText.toLowerCase() ||
-      contact.lastName.toLowerCase() === searchText.toLowerCase()
+      contact.firstName.toLowerCase().includes(searchText.toLowerCase()) ||
+      contact.lastName.toLowerCase().includes(searchText.toLowerCase())
   );
 
+  console.log(contactsFiltered);
+
+  var searchList = document.querySelector(".searchList");
+
   if (contactsFiltered.length === 0) {
+    document.getElementById("error").innerHTML = "";
     document.getElementById("error").innerHTML +=
       "<span class='error'>There is no result for this name</span>";
   } else {
-    contactList.innerHTML += `<div class="accordion" id="accordionExample">
+    searchList.innerHTML += `<div class="accordion" id="accordionExample">
           <h4 class="text-center">SEARCHED LIST</h4>`;
     contactsFiltered.forEach(function (contact) {
-      contactList.innerHTML += `
+      searchList.innerHTML += `
           <div class="accordion-item">
             <h2 class="accordion-header" id="headingOne">
               <button
@@ -302,6 +308,6 @@ document.getElementById("searchForm").addEventListener("submit", function (e) {
           </div>
           `;
     });
-    contactList.innerHTML += `</div>`;
+    searchList.innerHTML += `</div>`;
   }
 });
