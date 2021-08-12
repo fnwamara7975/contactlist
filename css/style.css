@@ -1,0 +1,32 @@
+#navbar-select {
+  margin: 0 auto;
+  padding: 1rem;
+}
+#navbar-select button:not(:last-child) {
+  margin-right: 1rem;
+}
+
+.container {
+  margin-top: 2rem;
+}
+
+.searchContact {
+  border: 3px solid #3e6259;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  border-radius: 0.5rem;
+}
+
+.contact {
+  border: 3px solid #3e6259;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  border-radius: 0.5rem;
+}
+
+.contactList {
+  border: 3px solid #3e6259;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  border-radius: 0.5rem;
+}
