@@ -43,7 +43,7 @@
     <div class="container">
       <div class="searchContact">
         <form id="searchForm" action="#">
-          <div id="message"></div>
+          <span id="error"> </span>
 
           <div class="mb-3">
             <label for="search" class="form-label">Search</label>
@@ -55,7 +55,7 @@
             />
           </div>
           <button
-            type="button"
+            type="submit"
             class="btn btn-primary"
             style="width: 100%; padding: 0.5rem"
           >
@@ -64,9 +64,12 @@
         </form>
       </div>
 
+      <div class="searchList"></div>
+
       <div class="contact">
-        <form id="contactForm" action="#">
+        <form id="contactForm">
           <div>
+            <div id="success"></div>
             <div class="row mb-3">
               <div class="col">
                 <label for="firstName" class="form-label">First name</label>
@@ -76,6 +79,7 @@
                   class="form-control"
                   id="firstName"
                 />
+                <span id="firstname-error"> </span>
               </div>
               <div class="col">
                 <label for="lastName" class="form-label">Last name</label>
@@ -85,6 +89,7 @@
                   class="form-control"
                   id="lastName"
                 />
+                <span id="lastname-error"></span>
               </div>
             </div>
             <div class="mb-3">
@@ -95,10 +100,12 @@
                 class="form-control"
                 id="address"
               />
+              <span id="address-error"></span>
             </div>
             <div class="mb-3">
               <label for="city" class="form-label">City</label>
               <input type="text" name="city" class="form-control" id="city" />
+              <span id="city-error"></span>
             </div>
             <div class="mb-3">
               <label for="province" class="form-label">Province</label>
@@ -108,6 +115,7 @@
                 class="form-control"
                 id="province"
               />
+              <span id="province-error"></span>
             </div>
             <div class="mb-3">
               <label for="postalCode" class="form-label">Postal code</label>
@@ -117,10 +125,12 @@
                 class="form-control"
                 id="postalCode"
               />
+              <span id="postalCode-error"></span>
             </div>
             <div class="mb-3">
               <label for="phone" class="form-label">Phone number</label>
               <input type="text" name="phone" class="form-control" id="phone" />
+              <span id="phone-error"></span>
             </div>
             <div class="mb-3">
               <label for="email" class="form-label">Email address</label>
@@ -130,6 +140,7 @@
                 class="form-control"
                 id="email"
               />
+              <span id="email-error"></span>
             </div>
             <div class="mb-3">
               <label for="notes" class="form-label">Notes</label>
@@ -140,10 +151,11 @@
                 id="notes"
                 rows="10"
               ></textarea>
+              <span id="notes-error"></span>
             </div>
           </div>
           <button
-            type="button"
+            type="submit"
             class="btn btn-primary"
             style="width: 100%; padding: 0.5rem"
           >
@@ -152,41 +164,7 @@
         </form>
       </div>
 
-      <div class="contactList">
-        <div class="accordion" id="accordionExample">
-          <h4 class="text-center">CONTACT LIST</h4>
-          <div class="accordion-item">
-            <h2 class="accordion-header" id="headingOne">
-              <button
-                class="accordion-button"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#collapseOne"
-                aria-expanded="true"
-                aria-controls="collapseOne"
-              >
-                James Odeyale
-              </button>
-            </h2>
-            <div
-              id="collapseOne"
-              class="accordion-collapse collapse show"
-              aria-labelledby="headingOne"
-              data-bs-parent="#accordionExample"
-            >
-              <div class="accordion-body">
-                <b>Address: </b>jam@gmail.com<br />
-                <b>City: </b>jam@gmail.com<br />
-                <b>Province: </b>jam@gmail.com<br />
-                <b>Postal code: </b>jam@gmail.com<br />
-                <b>Phone: </b>jam@gmail.com<br />
-                <b>Email: </b>jam@gmail.com<br />
-                <b>Note: </b>jam@gmail.com<br />
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      <div class="contactList"></div>
     </div>
 
     <script

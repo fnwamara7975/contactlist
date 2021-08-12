@@ -29,4 +29,28 @@
   padding: 2rem;
   margin-bottom: 2rem;
   border-radius: 0.5rem;
+  display: none;
+}
+
+.form-control {
+  margin-bottom: 0.4rem;
+}
+
+.error {
+  display: block;
+  background-color: #a20212;
+  color: #fffffa;
+  font-size: 0.8rem;
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+}
+
+.successMessage {
+  display: block;
+  background-color: #294936;
+  color: #fffffa;
+  font-size: 0.8rem;
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+  margin-bottom: 1rem;
 }
